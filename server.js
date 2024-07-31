@@ -9,7 +9,7 @@ import orderRouter from './routes/orderRoute.js';
 import catagoryRouter from './routes/catagoryRoute.js';
 //app config
 const app = express()
-
+const port = process.env.PORT || 4000
 // middleware
 app.use(express.json())
 app.use(cors())
@@ -29,6 +29,6 @@ app.get("/",(req,res)=>{
         res.send("API working")
 })
 
-app.listen(()=>{
-    console.log(`Server started on http://localhost:${process.env.PORT}`)
+app.listen(port,()=>{
+    console.log(`Server started on http://localhost:${port}`)
 })
