@@ -16,6 +16,7 @@ app.use(cors())
 
 //db connection
 connectDB();
+app.use('/uploads', express.static('uploads'));
 
 // api endpoints
 app.use("/api/catagory",catagoryRouter)
